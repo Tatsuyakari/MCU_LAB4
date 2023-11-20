@@ -11,14 +11,6 @@
 #include "global.h"
 #include "main.h"
 
-/*
-In this lab, a simple communication protocol is implemented as follows:
-• From the console, user types !RST# to ask for a sensory data.
-• The STM32 response the ADC_value, following a format !ADC=1234#, where
-1234 presents for the value of ADC_value variable.
-• The user ends the communication by sending !OK#
-The timeout for waiting the !OK# at STM32 is 3 seconds. After this period, its packet
-is sent again. The value is kept as the previous packet.*/
 void command_parser_fsm()
 {
     char current_char = buffer[index_buffer - 1];
