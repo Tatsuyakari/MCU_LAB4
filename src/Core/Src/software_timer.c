@@ -11,7 +11,7 @@
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-    SCH_Update();
+    // SCH_Update();
     timer_run();
 }
 
