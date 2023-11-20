@@ -7,21 +7,27 @@
 
 #ifndef INC_GLOBAL_H_
 #define INC_GLOBAL_H_
-#define INIT 1
-#define AUTO_RED 2
-#define AUTO_GREEN 3
-#define AUTO_YELLOW 4
-
 #include "main.h"
-#include "sofware_timer.h"
-#include "button.h"
-#include "7SEG.h"
-extern int status;
-extern int status1;
-extern int RED_TIME;
-extern int GREEN_TIME;
-extern int YELLOW_TIME;
-extern int LED_COUNDOWN;
-extern int LED_COUNDOWN_1;
+#include "stdint.h"
+
+#define MAX_BUFFER_SIZE 30
+#define INIT 1
+#define input_R 2
+#define input_S 3
+#define input_T 4
+#define end_O 5
+#define end_K 6
+#define RECEIVE 11
+#define TRANSMIT 12
+#define END 13
+extern uint8_t temp;
+extern uint8_t buffer[MAX_BUFFER_SIZE];
+extern uint8_t index_buffer;
+extern uint8_t buffer_flag;
+extern uint8_t status;
+extern uint8_t status1;
+extern uint8_t command_flag;
+extern uint8_t ADC_value;
+extern uint8_t str[12];
 
 #endif /* INC_GLOBAL_H_ */

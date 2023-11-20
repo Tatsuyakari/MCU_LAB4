@@ -5,17 +5,15 @@
  *      Author: kenng
  */
 
-#ifndef INC_SOFWARE_TIMER_H_
-#define INC_SOFWARE_TIMER_H_
+#ifndef INC_TIMER_H_
+#define INC_TIMER_H_
+#include "main.h"
 extern int timer1_flag;
 extern int timer2_flag;
-extern int timer3_flag;
-extern int timer4_flag;
 
-void set_timer1(int duration);
-void set_timer2(int duration);
-void set_timer3(int duration);
-void set_timer4(int duration);
-void timerRun();
+void setTimer1(int);
+void setTimer2(int);
 
-#endif /* INC_SOFWARE_TIMER_H_ */
+void timer_run(void);
+
+#endif /* INC_TIMER_H_ */

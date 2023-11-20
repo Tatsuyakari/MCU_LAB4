@@ -46,3 +46,18 @@ void SCH_Dispatch_Tasks(void)
         }
     }
 }
+void SCH_Delete(uint32_t TaskID)
+{
+    for (int i = 0; i < current_index_task; i++)
+    {
+        if (SCH_tasks_G[i].TaskID == TaskID)
+        {
+            for (int j = i; j < current_index_task - 1; j++)
+            {
+                SCH_tasks_G[j] = SCH_tasks_G[j + 1];
+            }
+            current_index_task--;
+            break;
+        }
+    }
+}
