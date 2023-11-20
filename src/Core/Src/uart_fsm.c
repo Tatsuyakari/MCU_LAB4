@@ -10,15 +10,8 @@
 #include "global.h"
 #include "main.h"
 #include "sofware_timer.h"
+#include "uart_fsm.h"
 
-// In this lab, a simple communication protocol is implemented as follows:
-// • From the console, user types !RST# to ask for a sensory data.
-// • The STM32 response the ADC_value, following a format !ADC=1234#, where
-// 1234 presents for the value of ADC_value variable.
-// • The user ends the communication by sending !OK#
-// The timeout for waiting the !OK# at STM32 is 3 seconds. After this period, its packet
-// is sent again. The value is kept as the previous packet.
-// uint8_t ADC_value = 0;
 void uart_communication_fsm()
 {
     switch (status1)
