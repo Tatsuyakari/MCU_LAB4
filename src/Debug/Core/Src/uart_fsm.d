@@ -27,7 +27,7 @@ Core/Src/uart_fsm.o: ../Core/Src/uart_fsm.c ../Core/Inc/cmd_parser_fsm.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h \
  ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h \
  ../Core/Inc/global.h ../Core/Inc/global.h ../Core/Inc/main.h \
- ../Core/Inc/sofware_timer.h
+ ../Core/Inc/sofware_timer.h ../Core/Inc/uart_fsm.h
 
 ../Core/Inc/cmd_parser_fsm.h:
 
@@ -94,3 +94,5 @@ Core/Src/uart_fsm.o: ../Core/Src/uart_fsm.c ../Core/Inc/cmd_parser_fsm.h \
 ../Core/Inc/main.h:
 
 ../Core/Inc/sofware_timer.h:
+
+../Core/Inc/uart_fsm.h:
